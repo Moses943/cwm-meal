@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+# Public values only (they are embedded in browser code by design). Never put a secret/service-role key here.
+[build.environment]
+  NEXT_PUBLIC_SUPABASE_URL = "https://reojklncnvnteqnjcune.supabase.co"
+  NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY = "sb_publishable_jRhdC_Mf2aw0HU8k5lBkiw_d_PRw8sP"
+  NODE_VERSION = "22"
+
+# Make sure the Next.js runtime (server pages, middleware, sign-in) is installed on every build.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
